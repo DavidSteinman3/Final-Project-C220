@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Coronapocalypse.png" type="Texture" id=2]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 958.449, 554.017 )
+scale = Vector2( 1.00554, 1.1374 )
+texture = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1917.0
+margin_bottom = 997.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start Game" type="Button" parent="."]
+margin_left = 810.0
+margin_top = 557.57
+margin_right = 1110.0
+margin_bottom = 657.57
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 810.0
+margin_top = 721.035
+margin_right = 1110.0
+margin_bottom = 821.035
+text = "Quit Game"
+
+[node name="Label" type="Label" parent="."]
+margin_left = -35.1067
+margin_top = 950.44
+margin_right = 1999.89
+margin_bottom = 1091.44
+custom_colors/font_color = Color( 0.941176, 0.882353, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "The year is 2022. While the human race fought effortlessly to minimize the impact of COVID-19,
+ the virus was slowly mutated into a contagion that turns humans into mindless, flesh eating zombies. 
+It is now up to a lone survivor to take matters into their own hands and rid their home of this pandemic once and for all."
+align = 1
+[connection signal="pressed" from="Start Game" to="." method="_on_Start_Game_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
